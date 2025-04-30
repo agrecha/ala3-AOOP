@@ -1,0 +1,258 @@
+/* 🔥 Inferno UI - styles.css 🔥 */
+/* Bold, fiery, and visually immersive design */
+
+/* Core Variables */
+:root {
+    --red: #D32F2F;
+    --dark-red: #C62828;
+    --light-red: #FFEBEE;
+    --white: #FFFFFF;
+    --gray: #F5F5F5;
+    --text: #333333;
+    --shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    --radius: 10px;
+    --transition: all 0.3s ease-out;
+}
+
+/* General Styles */
+body {
+    font-family: 'Urbanist', sans-serif;
+    background: var(--gray);
+    margin: 0;
+    padding: 40px 20px;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* Headers */
+h1, h2 {
+    text-align: center;
+    color: var(--red);
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2rem;
+    border-bottom: 4px solid var(--dark-red);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Table */
+table {
+    width: 95%;
+    margin: 40px auto;
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 18px;
+    text-align: left;
+    font-size: 1em;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: var(--dark-red);
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+tr:hover {
+    background-color: rgba(211, 47, 47, 0.1);
+    transform: scale(1.02);
+    transition: var(--transition);
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Buttons */
+.add-new,
+.action-links a,
+input[type="submit"] {
+    padding: 12px 24px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: var(--transition);
+    font-size: 1em;
+    text-transform: uppercase;
+    display: inline-block;
+    letter-spacing: 0.5px;
+}
+
+.add-new {
+    background: linear-gradient(135deg, var(--red), var(--dark-red));
+    color: var(--white);
+    margin: 20px auto;
+    display: block;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(211, 47, 47, 0.25);
+}
+
+.add-new:hover {
+    background: linear-gradient(135deg, var(--dark-red), var(--red));
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(211, 47, 47, 0.3);
+}
+
+.edit-link {
+    background-color: #e53935;
+    color: var(--white);
+}
+
+.edit-link:hover {
+    background-color: var(--dark-red);
+}
+
+.delete-link {
+    background-color: #b71c1c;
+    color: var(--white);
+}
+
+.delete-link:hover {
+    background-color: #7f0000;
+}
+
+/* Forms */
+form {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 30px;
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+label {
+    font-weight: 600;
+    color: var(--dark-red);
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="submit"] {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #ccc;
+    border-radius: var(--radius);
+    margin-top: 6px;
+    font-size: 1em;
+    transition: var(--transition);
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border-color: var(--red);
+    box-shadow: 0 0 8px rgba(198, 40, 40, 0.4);
+    outline: none;
+}
+
+input[type="submit"] {
+    background-color: var(--black);
+    color: var(--red);
+    font-weight: bold;
+    margin-top: 15px;
+    box-shadow: 0 6px 12px rgba(198, 40, 40, 0.25);
+}
+
+input[type="submit"]:hover {
+    background-color: var(--black);
+    transform: scale(1.03);
+}
+
+/* Message Boxes */
+.error-message,
+.success-message {
+    padding: 15px 25px;
+    border-radius: var(--radius);
+    margin: 25px auto;
+    max-width: 600px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+}
+
+.error-message {
+    background-color: #FFEBEE;
+    color: #C62828;
+    border: 1px solid #E57373;
+}
+
+.success-message {
+    background-color: #E8F5E9;
+    color: #2E7D32;
+    border: 1px solid #81C784;
+}
+
+/* Confirmation Box */
+.delete-confirmation {
+    text-align: center;
+    background: var(--light-red);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.delete-confirmation p {
+    font-size: 1.2em;
+    color: var(--dark-red);
+}
+
+.delete-confirmation .student-info {
+    background: var(--gray);
+    padding: 15px;
+    border-radius: var(--radius);
+    margin: 15px 0;
+    box-shadow: var(--shadow);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+
+    th, td {
+        padding: 12px;
+    }
+
+    form {
+        padding: 25px 20px;
+    }
+
+    .add-new {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+}
